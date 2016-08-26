@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GTf-DS-pZr">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="sPC-My-v7t">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sPC-My-v7t" id="FgE-Zn-FcB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Lk5-dr-Swu"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="A2E-qg-0kv"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0YI-Sf-WuN">
+                                <rect key="frame" x="69" y="28" width="237" height="29"/>
+                                <segments>
+                                    <segment title="StyleAlert"/>
+                                    <segment title="StyleActionSheet"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GTf-DS-pZr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="9vI-Tg-T4B"/>
+                            <constraint firstItem="GTf-DS-pZr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Pih-oM-bS8"/>
+                            <constraint firstItem="0YI-Sf-WuN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PvG-9a-xhG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GTf-DS-pZr" secondAttribute="bottom" id="RgY-X4-Kfz"/>
+                            <constraint firstItem="0YI-Sf-WuN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="cN4-Fa-BS0"/>
+                            <constraint firstAttribute="trailing" secondItem="GTf-DS-pZr" secondAttribute="trailing" id="f26-k3-hOo"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="styleSeg" destination="0YI-Sf-WuN" id="Qav-7U-WcX"/>
+                        <outlet property="tableView" destination="GTf-DS-pZr" id="Fkt-La-ecw"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="429.5"/>
+        </scene>
+    </scenes>
+</document>
